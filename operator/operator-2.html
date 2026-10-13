@@ -6,11 +6,22 @@
     <title>연산자</title>
 </head>
 <body>
-    <button it="btn">클릭 +</button>
-    <p class="conter">클릭 횟수 : 0</p>
+    <button id="btn">클릭 +</button>
+    <p class="counter">클릭 횟수 : 0</p>
     <script>
-        let clickBtn = document.querySelector("#btn")
+        let clickBtn = document.querySelector("#btn");
         console.log(clickBtn);
+        // 클릭횟수 담기
+        let counter = document.querySelector(".counter");
+        console.log(counter);
+        // 0을 담는다
+        let count = 0;
+        clickBtn.addEventListener("click", function (){
+            // console.log("클릭완료");
+            count++
+            // console.log(count);
+            counter.textContent = `클릭 횟수 : ${count}`
+        });
     </script>
 </body>
 </html>
